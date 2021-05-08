@@ -59,7 +59,7 @@ namespace CourseRegistration.Controllers
                 new DTO.Courses{ CourseId = 2, CourseNumber = 200, CourseName = "Pyro 101",
                                     Description = "Fire Basics" },
                 new DTO.Courses{ CourseId = 3, CourseNumber = 300, CourseName = "Dendro 101",
-                                    Description = "Plant Basics" }
+                                    Description = "Tree Basics" }
 
             };
 
@@ -75,7 +75,7 @@ namespace CourseRegistration.Controllers
             List<DTO.Instructors> instructors = new List<DTO.Instructors>()
             {
                 new DTO.Instructors{ InstructorId = 1, FirstName = "Arya", LastName = "Stark",
-                                    Email = "sansa@stark.ca", Course = "Cryo 101"},
+                                    Email = "arya@stark.ca", Course = "Cryo 101"},
                 new DTO.Instructors{ InstructorId = 2, FirstName = "Danaerys", LastName = "Targaryen",
                                     Email = "dany@drogo.ca", Course = "Pyro 101"},
                 new DTO.Instructors{ InstructorId = 3, FirstName = "Margaery", LastName = "Tyrell",
@@ -87,6 +87,13 @@ namespace CourseRegistration.Controllers
 
             return View(ivm);
         }
+
+        /*public IActionResult GetListOfCoursesByStudentId(int StudentId)
+        {
+            var result = _context.Courses.Where(XmlWriterTraceListener => XmlWriterTraceListener.StudentId).ToList();
+            return View(result);
+        }
+        */
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

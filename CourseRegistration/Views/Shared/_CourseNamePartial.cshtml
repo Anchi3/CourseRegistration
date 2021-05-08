@@ -1,41 +1,4 @@
-﻿
-@{
-    ViewData["Title"] = "Courses";
-}
-
-<style>
-    body {
-        background-color: lavenderblush;
-        font-weight: 800;
-    }
-</style>
-
-<h1>Courses</h1>
-
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Course ID</th>
-            <th>Course Number</th>
-            <th>Course Name</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        @foreach (var item in @Model.Courses)
-        {
-            <tr>
-                <th scope="row">@item.CourseId</th>
-                <td>@item.CourseNumber</td>
-                <td><a data-toggle="modal" href="#myModal">@item.CourseName</a></td>
-                <td>@item.Description</td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-<div class="modal" id="myModal">
+﻿<div class="modal" id="myModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
